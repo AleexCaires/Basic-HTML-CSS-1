@@ -1,0 +1,215 @@
+//variables
+$headercolor: #d8d8d8;
+$logocolor: #333;
+$herocolor: #555;
+
+$containerDark: $herocolor;
+$containerLight: $headercolor;
+
+$maxwidth: 960px;
+$headerheight: 60px;
+$lettertype: Helvetica;
+
+body {
+    font-family: $lettertype;
+    font-size: 18px;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+header {
+	width: 100%;
+	height: $headerheight;
+	background-color: $headercolor;
+
+	.inner {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		max-width: $maxwidth;
+		height: 100%;
+		margin: 0 auto;
+		align-items: center;
+
+		.logo {
+			width: 36px;
+			height: 36px;
+			background-color: #333;
+		}
+		nav.main-nav {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+
+			li {
+				list-style: none;
+				a {
+					text-decoration: none;
+					color: black;
+					padding: 10px 15px;
+					transition: all 0.5s ease-in-out;
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+#hero {
+	width: 100%;
+	height: 60vh;
+	background-color: $herocolor;
+
+	.inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		max-width: $maxwidth;
+		height: 100%;
+		margin: 0 auto;
+		text-align: center;
+		color: white;
+		align-items: center;
+		font-size: 24px;
+	}
+	p {
+		font-size: 36px;
+	}
+
+	.btn {
+		background-color: white;
+		color: black;
+		padding: 15px 15px;
+		text-align: center;
+		display: block;
+		text-decoration: none;
+		border-radius: 10px;
+		font-weight: lighter;
+	}
+}
+
+#main{
+    position: relative;
+	width:100%;
+    .inner {
+        position: relative;
+        max-width: $maxwidth;
+        height: 100%;
+        margin: 0 auto;
+        color: black;
+
+        .textcontent{
+            position: relative;
+            width: 100%;
+            margin-top: 80px;
+        }
+
+        .featured-image {
+            margin-top: 80px;
+            width: 100%;
+            display: flex;
+            flex-direction:row;
+            flex-wrap: nowrap;
+            justify-content:space-between;
+            position:relative;
+            align-items: flex-start;		
+            img{
+                width:calc(25% - 10px);
+                height:auto; 
+            }
+        }
+
+        #main-pic {
+            margin-top: 80px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            position: relative;
+            .main-image{
+                position: relative;
+                width: calc(50% - 20px);
+                &:hover{
+                    .content {
+                        opacity: 1;
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: auto;                   
+                }
+                .content{
+                    width: 100%;
+                    height: auto;
+                    padding: 10px 20px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #999999;
+                    opacity: 0;
+                    transition: opacity 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                    p{
+                        color:white;
+                        text-align: center;
+                        font-style: italic;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        #footer{
+            margin-top: 90px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            border-top: 1px solid black;
+
+            .container{
+            }
+
+            .social {
+                display: flex;
+                .square {
+                    &:hover{
+                        background-color: #333;
+                    }
+                    height: 28px;
+                    width: 28px;
+                    background-color: #d8d8d8;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    position: relative;
+                    flex-direction: row;
+                    list-style: none;
+                    margin-right: 10px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+

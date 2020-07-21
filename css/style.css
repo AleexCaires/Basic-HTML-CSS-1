@@ -1,0 +1,152 @@
+body {
+  font-family: Helvetica;
+  font-size: 18px; }
+
+body * {
+  box-sizing: border-box; }
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #d8d8d8; }
+  header .inner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center; }
+    header .inner .logo {
+      width: 36px;
+      height: 36px;
+      background-color: #333; }
+    header .inner nav.main-nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end; }
+      header .inner nav.main-nav li {
+        list-style: none; }
+        header .inner nav.main-nav li a {
+          text-decoration: none;
+          color: black;
+          padding: 10px 15px;
+          transition: all 0.5s ease-in-out; }
+          header .inner nav.main-nav li a:hover {
+            color: white; }
+
+#hero {
+  width: 100%;
+  height: 60vh;
+  background-color: #555; }
+  #hero .inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    align-items: center;
+    font-size: 24px; }
+  #hero p {
+    font-size: 36px; }
+  #hero .btn {
+    background-color: white;
+    color: black;
+    padding: 15px 15px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: lighter; }
+
+#main {
+  position: relative;
+  width: 100%; }
+  #main .inner {
+    position: relative;
+    max-width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    color: black; }
+    #main .inner .textcontent {
+      position: relative;
+      width: 100%;
+      margin-top: 80px; }
+    #main .inner .featured-image {
+      margin-top: 80px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      position: relative;
+      align-items: flex-start; }
+      #main .inner .featured-image img {
+        width: calc(25% - 10px);
+        height: auto; }
+    #main .inner #main-pic {
+      margin-top: 80px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      position: relative; }
+      #main .inner #main-pic .main-image {
+        position: relative;
+        width: calc(50% - 20px); }
+        #main .inner #main-pic .main-image:hover .content {
+          opacity: 1; }
+        #main .inner #main-pic .main-image img {
+          width: 100%;
+          height: auto; }
+        #main .inner #main-pic .main-image .content {
+          width: 100%;
+          height: auto;
+          padding: 10px 20px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: #999999;
+          opacity: 0;
+          transition: opacity 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+          #main .inner #main-pic .main-image .content p {
+            color: white;
+            text-align: center;
+            font-style: italic; }
+    #main .inner #footer {
+      margin-top: 90px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      border-top: 1px solid black; }
+      #main .inner #footer .social {
+        display: flex; }
+        #main .inner #footer .social .square {
+          height: 28px;
+          width: 28px;
+          background-color: #d8d8d8;
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          position: relative;
+          flex-direction: row;
+          list-style: none;
+          margin-right: 10px; }
+          #main .inner #footer .social .square:hover {
+            background-color: #333; }
+          #main .inner #footer .social .square:last-child {
+            margin-right: 0; }
